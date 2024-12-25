@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:613cafe8c6f0669bb01518f71b3984ee188ab9484a24525a1554df72baae6177"
+content_hash = "sha256:f47aced5b1a984eb73cc102ddaf4135fe038406143d1056100cafa93d7c997ad"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -1303,6 +1303,21 @@ files = [
 ]
 
 [[package]]
+name = "llama-index-vector-stores-pinecone"
+version = "0.4.2"
+requires_python = "<3.13,>=3.9"
+summary = "llama-index vector_stores pinecone integration"
+groups = ["default"]
+dependencies = [
+    "llama-index-core<0.13.0,>=0.12.0",
+    "pinecone-client<6.0.0,>=3.2.2",
+]
+files = [
+    {file = "llama_index_vector_stores_pinecone-0.4.2-py3-none-any.whl", hash = "sha256:bd5fd308720d3ccc93f8b659c4a4e1f3c4e374375dbd30447b5b550de11c2d7e"},
+    {file = "llama_index_vector_stores_pinecone-0.4.2.tar.gz", hash = "sha256:999acfadcf09fc17b7eac58410facf31cf49f4342b7a75d67886155d4ecfb9fd"},
+]
+
+[[package]]
 name = "llama-parse"
 version = "0.5.18"
 requires_python = "<4.0,>=3.9"
@@ -1733,6 +1748,51 @@ files = [
     {file = "pillow-11.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:8ec4a89295cd6cd4d1058a5e6aec6bf51e0eaaf9714774e1bfac7cfc9051db47"},
     {file = "pillow-11.0.0-cp312-cp312-win_arm64.whl", hash = "sha256:27a7860107500d813fcd203b4ea19b04babe79448268403172782754870dac25"},
     {file = "pillow-11.0.0.tar.gz", hash = "sha256:72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739"},
+]
+
+[[package]]
+name = "pinecone-client"
+version = "5.0.1"
+requires_python = "<4.0,>=3.8"
+summary = "Pinecone client and SDK"
+groups = ["default"]
+dependencies = [
+    "certifi>=2019.11.17",
+    "pinecone-plugin-inference<2.0.0,>=1.0.3",
+    "pinecone-plugin-interface<0.0.8,>=0.0.7",
+    "tqdm>=4.64.1",
+    "typing-extensions>=3.7.4",
+    "urllib3>=1.26.0; python_version >= \"3.8\" and python_version < \"3.12\"",
+    "urllib3>=1.26.5; python_version ~= \"3.12\"",
+]
+files = [
+    {file = "pinecone_client-5.0.1-py3-none-any.whl", hash = "sha256:c8f7835e1045ba84e295f217a8e85573ffb80b41501bbc1af6d92c9631c567a7"},
+    {file = "pinecone_client-5.0.1.tar.gz", hash = "sha256:11c33ff5d1c38a6ce69e69fe532c0f22f312fb28d761bb30b3767816d3181d64"},
+]
+
+[[package]]
+name = "pinecone-plugin-inference"
+version = "1.1.0"
+requires_python = "<4.0,>=3.8"
+summary = "Embeddings plugin for Pinecone SDK"
+groups = ["default"]
+dependencies = [
+    "pinecone-plugin-interface<0.0.8,>=0.0.7",
+]
+files = [
+    {file = "pinecone_plugin_inference-1.1.0-py3-none-any.whl", hash = "sha256:32c61aba21c9a28fdcd0e782204c1ca641aeb3fd6e42764fbf0de8186eb657ec"},
+    {file = "pinecone_plugin_inference-1.1.0.tar.gz", hash = "sha256:283e5ae4590b901bf2179beb56fc3d1b715e63582f37ec7abb0708cf70912d1f"},
+]
+
+[[package]]
+name = "pinecone-plugin-interface"
+version = "0.0.7"
+requires_python = "<4.0,>=3.8"
+summary = "Plugin interface for the Pinecone python client"
+groups = ["default"]
+files = [
+    {file = "pinecone_plugin_interface-0.0.7-py3-none-any.whl", hash = "sha256:875857ad9c9fc8bbc074dbe780d187a2afd21f5bfe0f3b08601924a61ef1bba8"},
+    {file = "pinecone_plugin_interface-0.0.7.tar.gz", hash = "sha256:b8e6675e41847333aa13923cc44daa3f85676d7157324682dc1640588a982846"},
 ]
 
 [[package]]

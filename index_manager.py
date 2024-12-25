@@ -47,4 +47,5 @@ class IndexManager:
         return load_index_from_storage(storage_context, embed_model=self.embed_model)
 
     def list_papers(self):
-        print([paper["title"] for paper in self.papers])
+        for paper in self.papers:
+            print(paper["title"])
