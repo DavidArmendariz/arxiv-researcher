@@ -2,12 +2,12 @@ import streamlit as st
 
 from agent import Agent
 from constants import embed_model, llm_model
-from index_manager import IndexManager
+from index_manager_pinecone import IndexManagerPinecone
 
 
 @st.cache_resource
 def initialize_agent():
-    index_manager = IndexManager(embed_model)
+    index_manager = IndexManagerPinecone(embed_model, "arxiv-research")
     index = index_manager.retrieve_index()
     return Agent(index, llm_model)
 
